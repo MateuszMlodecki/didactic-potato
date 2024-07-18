@@ -4,9 +4,9 @@ function goToHome() {
 
 // tutaj kod todolist
 document.addEventListener("DOMContentLoaded", () => {
-  let form = document.getElementById("todo-form");
-  let input = document.getElementById("todo-input");
-  let ul = document.getElementById("todo-ul");
+  const form = document.getElementById("todo-form");
+  const input = document.getElementById("todo-input");
+  const ul = document.getElementById("todo-ul");
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -21,33 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
   function addToDoItem(text) {
     const li = document.createElement("li");
     li.textContent = text;
-    let deleteButton = document.createElement("button");
+    const deleteButton = document.createElement("button");
     deleteButton.textContent = "x";
     deleteButton.addEventListener("click", function () {
       deleteToDoItem(li);
     });
     li.appendChild(deleteButton);
-
-    /*
-    deleteButton = ...
-    deleteButton.textContent = 
-    deleteButton.addEvent na "click", fucn () {
-    deleteToDoItem(param)
-    }
-    appenchild(deleteButton)
-    
-    */
-
     ul.appendChild(li);
   }
   function deleteToDoItem(li) {
     ul.removeChild(li);
   }
-
-  /*
-  fn deleteToDo...(param){
-  ul.removechild(param)
-  }
-
-  */
 });
