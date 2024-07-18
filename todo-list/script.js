@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function addToDoItem(text) {
     const li = document.createElement("li");
     li.textContent = text;
-    li.className = "liMargin";
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "x";
     deleteButton.className = "myButtonX";
