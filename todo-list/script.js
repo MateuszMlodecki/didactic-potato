@@ -3,54 +3,59 @@ function goToHome() {
 }
 
 // tutaj kod todolist
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("todo-form");
-  const input = document.getElementById("todo-input");
-  const ul = document.getElementById("todo-ul");
+let todoInput;
+let errorInfo;
+let addBtn;
+let ulList;
+let newTask;
 
-  loadToDoItems();
+const prepareDOMElements = () => {
+  todoInput = document.querySelector(".todo-input");
+  errorInfo = document.querySelector(".error-info");
+  addBtn = document.querySelector(".toDoButtons");
+  ulList = document.querySelector(".todo-ul");
+};
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    let toDoText = input.value;
+const prepareDOMEvents = () => {
+  addBtn.addEventListener("click", addNewTask);
+};
+const addNewTask = (e) => {
+  e.preventDefault();
+  if (todoInput.value !== "") {
+    newTask = document.createElement("li");
+    newTask.classList.add("item");
+    newTask.textContent = todoInput.value;
+    addTools(newTask);
+    ulList.append(newTask);
 
-    if (toDoText !== "") {
-      addToDoItem(toDoText);
-      input.value = "";
-      saveToDoItems();
-    }
-  });
-
-  function addToDoItem(text) {
-    const li = document.createElement("li");
-    li.textContent = text;
-    const deleteButton = document.createElement("button");
-    deleteButton.textContent = "x";
-    deleteButton.className = "myButtonX";
-    deleteButton.addEventListener("click", function () {
-      deleteToDoItem(li);
-    });
-    li.appendChild(deleteButton);
-    ul.appendChild(li);
+    todoInput.value = "";
+    errorInfo.textContent = "";
+  } else {
+    errorInfo.textContent = "wpisz treść zadania!";
   }
+};
+const addTools = () => {
+  const toolsPanel = document.createElement("div");
+  toolsPanel.classList.add("tools");
+  newTask.append(toolsPanel);
 
-  function deleteToDoItem(li) {
-    ul.removeChild(li);
-    saveToDoItems();
-  }
+  const completeBtn = document.createElement("button");
+  completeBtn.classList.add("complete");
+  completeBtn.textContent = "✅";
 
-  function saveToDoItems() {
-    const items = [];
-    ul.querySelectorAll("li").forEach((li) => {
-      items.push(li.firstChild.textContent);
-    });
-    localStorage.setItem("todoItems", JSON.stringify(items));
-  }
+  const editBtn = document.createElement("button");
+  editBtn.classList.add("edit");
+  editBtn.textContent = "✏️";
 
-  function loadToDoItems() {
-    const items = JSON.parse(localStorage.getItem("todoItems")) || [];
-    items.forEach((item) => {
-      addToDoItem(item);
-    });
-  }
-});
+  const deleteBtn = document.createElement("button");
+  deleteBtn.classList.add("delete");
+  deleteBtn.textContent = "🚫";
+
+  toolsPanel.append(completeBtn, editBtn, deleteBtn);
+};
+
+const main = () => {
+  prepareDOMElements();
+  prepareDOMEvents();
+};
+document.addEventListener("DOMContentLoaded", main);

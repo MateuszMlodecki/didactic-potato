@@ -7,22 +7,44 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button class="myButton" onclick="goToHome()">Home</button>
+    <div class="menu">
+      <button onclick="goToHome()">Home</button>
+    </div>
     <h1 class="h1">To Do list</h1>
-    <div class="background"></div>
     <div class="container">
-      <form id="todo-form">
+      <form class="todo-form">
         <input
           type="text"
-          id="todo-input"
-          required
+          class="todo-input"
           placeholder="tu wpisz swoje zadanie"
         />
-        <button class="myButton" type="submit">Dodaj</button>
+        <button class="toDoButtons" type="submit">Dodaj</button>
       </form>
-      <ul class="todo-list" id="todo-ul"></ul>
+      <h3 style="text-align: center">Lista zadań</h3>
+      <p class="error-info">Brak zadań na liście</p>
+      <ul class="todo-ul">
+        <li class="item">
+          przykładowy task
+          <div class="tools">
+            <button class="complete">✅</button><button class="edit">✏️</button
+            ><button class="delete">🚫</button>
+          </div>
+        </li>
+      </ul>
     </div>
-
+    <div class="popup">
+      <h3>Edytuj zadanie:</h3>
+      <div class="popup-body">
+        <p class="popup-info"></p>
+        <input
+          type="text"
+          class="popup-input"
+          placeholder="wpisz nową treść zadania"
+        />
+        <button class="popup-btn accept">✅</button>
+        <button class="popup-btn cancel">🚫</button>
+      </div>
+    </div>
     <script src="script.js" defer></script>
   </body>
 </html>
