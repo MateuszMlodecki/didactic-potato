@@ -1,5 +1,5 @@
 function goToHome() {
-  window.location.href = "http://localhost:5500/index.html";
+  window.location.href = "../index.html";
 }
 
 // tutaj kod todolist
@@ -105,3 +105,10 @@ const main = () => {
   prepareDOMEvents();
 };
 document.addEventListener("DOMContentLoaded", main);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector(".container");
+  if (container) {
+    container.classList.add("slide-in");
+  }
+});
