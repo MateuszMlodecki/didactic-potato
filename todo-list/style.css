@@ -105,7 +105,12 @@ h3 {
 
 .item.completed {
   text-decoration: line-through;
-  color: #888;
+  color: grey;
+}
+
+.item.completed .tools {
+  text-decoration: none;
+  color: initial;
 }
 
 .tools {
