@@ -19,3 +19,84 @@
 .menu button:hover {
   background-color: #0056b3;
 }
+/* ciemny motyw switcher */
+.switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #ccc;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.emoji {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.moon {
+  top: 15px;
+  left: 30px;
+}
+
+.sun {
+  top: 15px;
+  right: 30px;
+  display: none;
+}
+
+input:checked + .slider .moon {
+  display: none;
+}
+
+input:checked + .slider .sun {
+  display: inline;
+}
+
+.dark-mode {
+  background-color: dimgrey;
+}
+
+/* Koniec switchera */
