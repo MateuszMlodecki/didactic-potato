@@ -124,12 +124,12 @@ h3 {
 
 .item.completed .tools {
   text-decoration: none;
-  color: initial;
 }
 
 .tools {
   display: flex;
   gap: 10px;
+  text-decoration: none;
 }
 
 .tools button {
@@ -137,6 +137,7 @@ h3 {
   border: none;
   cursor: pointer;
   font-size: 16px;
+  text-decoration: none;
 }
 
 .popup {
