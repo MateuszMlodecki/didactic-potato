@@ -39,7 +39,10 @@ const addNewTask = (e) => {
   if (todoInput.value !== "") {
     newTask = document.createElement("li");
     newTask.classList.add("item");
-    newTask.textContent = todoInput.value;
+    const taskText = document.createElement("p");
+    taskText.style = "margin: 0";
+    taskText.textContent = todoInput.value;
+    newTask.appendChild(taskText);
     addTools(newTask);
     ulList.append(newTask);
 

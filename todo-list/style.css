@@ -43,7 +43,6 @@ body {
   width: 90%;
   max-width: 600px;
   margin: 0 auto;
-  opacity: 0;
 }
 @keyframes slideInFromTop {
   from {
@@ -117,13 +116,9 @@ h3 {
   word-wrap: break-word;
 }
 
-.item.completed {
+.item.completed p {
   text-decoration: line-through;
   color: grey;
-}
-
-.item.completed .tools {
-  text-decoration: none;
 }
 
 .tools {
@@ -198,7 +193,6 @@ h3 {
   background-color: #c82333;
 }
 
-/* Responsive design adjustments */
 @media (min-width: 600px) {
   .container {
     width: 80%;
