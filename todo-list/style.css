@@ -113,7 +113,13 @@ h3 {
   border-bottom: 1px solid #ddd;
   border-radius: 4px;
   margin-bottom: 10px;
+  max-width: 100%;
   word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.item p {
+  max-width: 70%;
 }
 
 .item.completed p {
