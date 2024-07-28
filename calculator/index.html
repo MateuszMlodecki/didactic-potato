@@ -7,26 +7,29 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="menu">
+      <button onclick="goToHome()">Home</button>
+    </div>
     <div class="calculator">
       <input id="display" readonly />
       <div class="key">
-        <button class="calc-Btn">+</button>
-        <button class="calc-Btn">7</button>
-        <button class="calc-Btn">8</button>
-        <button class="calc-Btn">9</button>
-        <button class="calc-Btn">-</button>
-        <button class="calc-Btn">4</button>
-        <button class="calc-Btn">5</button>
-        <button class="calc-Btn">6</button>
-        <button class="calc-Btn">/</button>
-        <button class="calc-Btn">1</button>
-        <button class="calc-Btn">2</button>
-        <button class="calc-Btn">3</button>
-        <button class="calc-Btn">*</button>
-        <button class="calc-Btn">.</button>
-        <button class="calc-Btn">C</button>
-        <button class="calc-Btn">0</button>
-        <button class="calc-Btn">=</button>
+        <button class="green" onclick="appendToDisplay('+')">+</button>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button class="green" onclick="appendToDisplay('-')">-</button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button class="green" onclick="appendToDisplay('*')">*</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button class="green" onclick="appendToDisplay('/')">/</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button class="orange" onclick="calculate()">=</button>
+        <button class="orange" onclick="clearDisplay()">C</button>
       </div>
     </div>
     <script src="script.js" defer></script>

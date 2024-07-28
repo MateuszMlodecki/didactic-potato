@@ -110,5 +110,5 @@ input:checked + .slider .sun {
 /* Dark Mode */
 body.dark-mode {
   background-color: dimgrey;
-  color: white; /* Opcjonalnie: aby tekst był czytelny na ciemnym tle */
+  color: white;
 }
