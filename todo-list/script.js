@@ -151,3 +151,23 @@ document.addEventListener("DOMContentLoaded", () => {
     container.classList.add("slide-in");
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("darkModeToggle");
+  const darkModeEnabled = localStorage.getItem("dark-mode") === "true";
+
+  toggle.checked = darkModeEnabled;
+  if (darkModeEnabled) {
+    document.body.classList.add("dark-mode");
+  }
+
+  toggle.addEventListener("change", () => {
+    if (toggle.checked) {
+      document.body.classList.add("dark-mode");
+      localStorage.setItem("dark-mode", "true");
+    } else {
+      document.body.classList.remove("dark-mode");
+      localStorage.setItem("dark-mode", "false");
+    }
+  });
+});
