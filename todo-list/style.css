@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -11,6 +12,7 @@ body {
   box-sizing: border-box;
 }
 
+/* Header Styles */
 header {
   display: flex;
   justify-content: flex-start;
@@ -37,11 +39,13 @@ header {
   background-color: #0056b3;
 }
 
+/* Heading Styles */
 .h1 {
   margin-bottom: 20px;
   text-align: center;
 }
 
+/* Container Styles */
 .container {
   background: white;
   padding: 20px;
@@ -67,6 +71,7 @@ header {
   animation: slideInFromTop 0.5s ease-out forwards;
 }
 
+/* Form Styles */
 .todo-form {
   display: flex;
   flex-direction: column;
@@ -102,12 +107,14 @@ h3 {
   margin-top: 0;
 }
 
+/* Error Info */
 .error-info {
   text-align: center;
   color: #888;
   font-style: italic;
 }
 
+/* List Styles */
 .todo-ul {
   list-style-type: none;
   padding: 0;
@@ -150,14 +157,22 @@ h3 {
   text-decoration: none;
 }
 
+/* Popup Styles */
 .popup {
   display: none;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50);
+  transform: translate(-50%, -50%);
+  background: white; /* Default light background */
+  color: black; /* Default dark text */
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it appears above other content */
 }
-/* Ciemny motyw switcher */
+
+/* Dark Mode Switcher */
 .switch {
   display: flex;
   float: right;
@@ -208,7 +223,15 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+.popup-btn.accept {
+  background-color: #28a745;
+}
 
+.popup-btn.cancel {
+  background-color: #dc3545;
+}
+
+/* Emoji Styles */
 .emoji {
   position: absolute;
   top: 50%;
@@ -271,6 +294,9 @@ body.dark-mode .item p {
 
 body.dark-mode .popup {
   background: #333;
+  color: #fff;
+}
+body.dark-mode h3 {
   color: #fff;
 }
 
