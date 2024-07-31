@@ -4,6 +4,15 @@ function goToHome() {
 const display = document.getElementById("display");
 
 function appendToDisplay(input) {
+  if (display.value === "" && ["*", "/", "."].includes(input)) {
+    return;
+  }
+  if (
+    ["*", "/", ".", "+", "-"].includes(display.value.slice(-1)) &&
+    ["*", "/", ".", "+", "-"].includes(input)
+  ) {
+    return;
+  }
   display.value += input;
 }
 

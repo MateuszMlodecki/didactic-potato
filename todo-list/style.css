@@ -4,29 +4,21 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
+
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   box-sizing: border-box;
 }
 
-/* Header Styles */
-header {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-}
-
 .menu {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
   margin: 0;
 }
 
 .menu button {
+  grid-column: 3/4;
   background-color: #007bff;
   color: white;
   border: none;
@@ -41,6 +33,9 @@ header {
 
 /* Heading Styles */
 .h1 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column: 1;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -73,12 +68,14 @@ header {
 
 /* Form Styles */
 .todo-form {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column: 1/2;
   margin-bottom: 20px;
 }
 
 .todo-input {
+  text-align: center;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -174,12 +171,12 @@ h3 {
 
 /* Dark Mode Switcher */
 .switch {
-  display: flex;
-  float: right;
+  position: absolute;
+  right: 20px;
+  top: 20px;
   height: 34px;
-  position: relative;
   width: 60px;
-  margin-top: 10px; /* Odstęp od nagłówka lub innego elementu */
+  margin-top: 10px;
 }
 
 .switch input {
@@ -276,6 +273,7 @@ body.dark-mode .todo-input,
 body.dark-mode .popup-input {
   background-color: #444;
   border: 1px solid #666;
+  color: #ccc;
 }
 
 body.dark-mode .todo-input::placeholder,

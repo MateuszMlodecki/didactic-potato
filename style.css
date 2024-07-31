@@ -5,14 +5,15 @@ body {
 
 /* Menu */
 .menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: space-between;
-  top: 10px;
-  left: 10px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
 }
-
+.menu #to-do {
+  grid-column: 2/3;
+}
+.menu #calculator {
+  grid-column: 3/4;
+}
 .menu button {
   background-color: #007bff;
   color: white;
