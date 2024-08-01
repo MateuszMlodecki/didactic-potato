@@ -96,7 +96,7 @@ const checkClick = (e) => {
 const editTodo = (e) => {
   todoToEdit = e.target.closest("li");
   popupInput.value = todoToEdit.firstChild.textContent;
-  popup.style.display = "flex";
+  popup.style.display = "grid";
 };
 
 const closePopup = () => {
