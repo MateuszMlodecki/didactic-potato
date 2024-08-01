@@ -6,13 +6,13 @@ body {
 /* Menu */
 .menu {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .menu #to-do {
   grid-column: 2/3;
 }
 .menu #calculator {
-  grid-column: 3/4;
+  grid-column: 4/5;
 }
 .menu button {
   background-color: #007bff;
@@ -89,13 +89,13 @@ input:checked + .slider:before {
 }
 
 .moon {
-  top: 15px;
-  left: 30px;
+  top: 17px;
+  left: 33px;
 }
 
 .sun {
-  top: 15px;
-  right: 30px;
+  top: 17px;
+  right: 33px;
   display: none;
 }
 
