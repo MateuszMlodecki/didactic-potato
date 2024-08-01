@@ -180,7 +180,7 @@ body {
   grid-row: 2 / 3;
 }
 .popup-input {
-  max-width: 60%;
+  max-width: auto;
 }
 
 /* Dark Mode Switcher */
