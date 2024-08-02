@@ -256,13 +256,13 @@ input:checked + .slider:before {
 }
 
 .moon {
-  top: 17px;
-  left: 33px;
+  top: 44%;
+  left: 50%;
 }
 
 .sun {
-  top: 17px;
-  right: 33px;
+  top: 44%;
+  right: 50%;
   display: none;
 }
 
