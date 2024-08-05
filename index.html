@@ -5,20 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Magik</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/fontello.css" />
+    <script defer src="script.js"></script>
   </head>
   <body>
-    <label class="switch">
-      <input type="checkbox" id="darkModeToggle">
-      <span class="slider round">
-        <span class="emoji sun">🌙</span>
-        <span class="emoji moon">☀️</span>
-      </span>
-    </label>
-      <div class="menu">
-        <button id="to-do" onclick="goToToDo()">To Do</button>
-        <button id="calculator" onclick="goToCalculator()">Calculator</button>
-      </div>
+    <div>
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle" />
+        <span class="slider round">
+          <span class="emoji sun">🌙</span>
+          <span class="emoji moon">☀️</span>
+        </span>
+      </label>
     </div>
-    <script src="script.js" defer></script>
+    <nav class="menu">
+      <div class="menu-container folding folding-expanded">
+        <i id="menu-icon" class="icon-menu"></i>
+        <ul class="menu-items folding-content">
+          <li>
+            <a class="menu-link" href="index.html">Home</a>
+          </li>
+          <li>
+            <a class="menu-link" href="#">About Me</a>
+          </li>
+          <li>
+            <a class="menu-link" href="#">Projects</a>
+          </li>
+          <li>
+            <a class="menu-link" href="#">Contact</a>
+          </li>
+          <li class="menu-last-element">
+            <a
+              class="menu-link"
+              href="https://github.com/MateuszMlodecki"
+              target="_blank"
+              >GitHub</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-aboutMe">
+      <h1>About me</h1>
+      <p class=>blah blah blah not finished yet</p>
+    </div>
+    <div class="container-projects">
+      <h3>My projects:</h3>
+      <div class="gallery"></div>
+        <div class="card" onclick="goToCalculator()"><img src="calculator_img.png"></img>
+          <p>Calculator</p>
+        </div>
+        <div class="card" onclick="goToToDoList()"><img src="todolist.png"></img>
+          <p>To Do List</p>
+        </div>
+        <div class="card">
+          Card 3
+        </div>
+        <div class="card">
+          Card 4
+        </div>
+        <div class="card">
+          Card 5
+        </div>
+        <div class="card">
+          Card 6
+        </div>
+    </div>
   </body>
 </html>

@@ -1,41 +1,75 @@
 /* Ogólne style dla body */
 body {
   transition: background-color 0.4s, color 0.4s;
+  background-color: #e5e9ed;
 }
 
 /* Menu */
 .menu {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 10px;
+
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
-.menu #to-do {
-  grid-column: 2/3;
-}
-.menu #calculator {
-  grid-column: 4/5;
-}
-.menu button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+#menu-icon {
+  color: #000;
+  font-size: 1.5rem;
+  border: 1px solid #000;
+  padding: 0.5rem 0.5rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
   cursor: pointer;
-  margin: 10px;
-  transition: background-color 0.3s, transform 0.2s;
 }
-
-.menu button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+.menu-items {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  row-gap: 1.6rem;
 }
+.menu-link {
+  color: #000;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.menu-last-element {
+  padding-bottom: 2rem;
+}
+.folding-content {
+  max-height: 0;
+  overflow: hidden;
+}
+/* Menu end*/
 
+.container-aboutMe {
+  background-color: rgb(83, 136, 29);
+  max-width: 1140px;
+  margin: 1px auto;
+  border-radius: 10px;
+}
+.container-projects {
+  display: flex;
+  background-color: rgb(111, 136, 29);
+  max-width: 1140px;
+  margin: 1px auto;
+  border-radius: 10px;
+}
+.container-projects h3 {
+  margin: 5px;
+}
 /* ciemny motyw switcher */
 .switch {
-  display: inline-block;
+  float: right;
   height: 34px;
   position: relative;
   width: 60px;
+  z-index: 1000;
 }
 
 .switch input {
@@ -89,13 +123,11 @@ input:checked + .slider:before {
 }
 
 .moon {
-  top: 17px;
-  left: 33px;
+  left: 50%;
 }
 
 .sun {
-  top: 17px;
-  right: 33px;
+  right: 50%;
   display: none;
 }
 
@@ -107,9 +139,77 @@ input:checked + .slider .sun {
   display: inline;
   opacity: 1;
 }
-
+.folding-content {
+  max-height: 0;
+  overflow: hidden;
+}
+/* Dark Mode switcher end*/
+/* Project cards design */
+.gallery {
+  display: flex;
+  gap: 4px;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+  border-radius: 4px;
+  padding: 0px;
+  height: 160px;
+  background-color: white;
+  transition: 0.4s ease-in-out;
+  flex: 1px;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px 4px 0 0;
+}
+.card:nth-child(1) {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.card:nth-child(2) {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.card:hover {
+  flex: 2;
+  font-weight: bold;
+  cursor: pointer;
+}
 /* Dark Mode */
 body.dark-mode {
   background-color: dimgrey;
   color: white;
+}
+/* Folding */
+.folding-expanded .folding-content {
+  max-height: 100vh;
+}
+.folding-expanded #menu-icon {
+  box-shadow: 0 0 3px 2px #fff;
+  border-radius: 5px;
+}
+@media screen and (min-width: 900px) {
+  .menu-items {
+    flex-direction: row;
+    justify-content: flex-end;
+    column-gap: 1.5rem;
+    padding: 2rem 0;
+    margin-right: 3rem;
+  }
+  .menu-last-element {
+    padding-bottom: 0rem;
+    padding-right: 2rem;
+  }
+  #menu-icon {
+    display: none;
+  }
+  .switch {
+    margin-top: 3rem;
+    margin-right: 0.5rem;
+  }
 }

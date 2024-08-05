@@ -1,9 +1,17 @@
-function goToToDo() {
-  window.location.href = "todo-list/index.html";
-}
 function goToCalculator() {
-  window.location.href = "calculator/index.html";
+  window.location.href = "../calculator/index.html";
 }
+function goToToDoList() {
+  window.location.href = "../todo-list/index.html";
+}
+
+const folding = document.querySelectorAll(".folding");
+folding.forEach((item) => {
+  item.addEventListener("click", function () {
+    this.classList.toggle("folding-expanded");
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.getElementById("darkModeToggle");
   const darkModeEnabled = localStorage.getItem("dark-mode") === "true";

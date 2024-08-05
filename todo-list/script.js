@@ -2,6 +2,7 @@ function goToHome() {
   window.location.href = "../index.html";
 }
 
+
 // Tutaj kod todolist
 let todoInput;
 let errorInfo;
