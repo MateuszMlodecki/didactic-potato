@@ -1,8 +1,10 @@
 function goToCalculator() {
-  window.location.href = "../calculator/index.html";
+  window.location.href =
+    "https://mateuszmlodecki.github.io/didactic-potato/calculator/index.html";
 }
 function goToToDoList() {
-  window.location.href = "../didactic-potato/todo-list/index.html";
+  window.location.href =
+    "https://mateuszmlodecki.github.io/didactic-potato/todo-list/index.html";
 }
 
 const folding = document.querySelectorAll(".folding");
