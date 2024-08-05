@@ -2,7 +2,7 @@ function goToCalculator() {
   window.location.href = "../calculator/index.html";
 }
 function goToToDoList() {
-  window.location.href = "../todo-list/index.html";
+  window.location.href = "../didactic-potato/todo-list/index.html";
 }
 
 const folding = document.querySelectorAll(".folding");
