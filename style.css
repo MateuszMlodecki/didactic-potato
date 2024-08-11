@@ -188,6 +188,8 @@ body.dark-mode {
 /* Folding */
 .folding-expanded .folding-content {
   max-height: 100vh;
+  box-shadow: 0 0 3px 2px #fff;
+  border-radius: 5px;
 }
 .folding-expanded #menu-icon {
   box-shadow: 0 0 3px 2px #fff;
