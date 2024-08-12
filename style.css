@@ -51,12 +51,19 @@ body {
 }
 /* Menu end*/
 /* ciemny motyw switcher */
+.switch-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 50px;
+  margin-right: 20px;
+}
+
 .switch {
-  float: right;
   height: 34px;
-  position: relative;
   width: 60px;
-  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
 }
 
 .switch input {
@@ -65,24 +72,22 @@ body {
 
 .slider {
   background-color: #ccc;
-  bottom: 0;
+  height: 100%;
+  width: 100%;
   cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
   transition: background-color 0.4s, transform 0.4s;
+  border-radius: 34px;
 }
 
 .slider:before {
-  background-color: #fff;
-  bottom: 4px;
   content: "";
   height: 26px;
-  left: 4px;
-  position: absolute;
-  transition: background-color 0.4s, transform 0.4s;
   width: 26px;
+  background-color: #fff;
+  margin: 4px;
+  transition: background-color 0.4s, transform 0.4s;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 input:checked + .slider {
@@ -93,28 +98,20 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
 .emoji {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   font-size: 20px;
   transition: opacity 0.4s;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .moon {
-  left: 50%;
+  margin-right: 10px;
 }
 
 .sun {
-  right: 50%;
+  top: 5px;
+  margin-left: 0px;
   display: none;
 }
 
@@ -123,13 +120,15 @@ input:checked + .slider .moon {
 }
 
 input:checked + .slider .sun {
-  display: inline;
+  display: inline-block;
   opacity: 1;
 }
+
 .folding-content {
   max-height: 0;
   overflow: hidden;
 }
+
 /* Dark Mode switcher end*/
 
 /* Dark Mode */
@@ -156,8 +155,8 @@ body.dark-mode {
   text-align: center;
 }
 .main-container p {
-  margin-left: 4rem;
-  margin-right: 4rem;
+  margin-left: 25%;
+  margin-right: 25%;
   text-align: center;
 }
 .projects-container {

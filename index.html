@@ -9,15 +9,6 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <div>
-      <label class="switch">
-        <input type="checkbox" id="darkModeToggle" />
-        <span class="slider round">
-          <span class="emoji sun">🌙</span>
-          <span class="emoji moon">☀️</span>
-        </span>
-      </label>
-    </div>
     <nav class="menu">
       <div class="menu-container folding">
         <svg
@@ -67,13 +58,26 @@
       </p>
     </div>
     <div class="projects-container">
-      <h2>My projects</h2>
-      <h3>To-Do list</h3>
-      <p>
-        Simple To-Do list includes adding, removing, marking as completed and
-        editing
-      </p>
-      <a href="todo-list/index.html"><img src="todolist.png" alt="" /></a>
+      <div class="div.todolist">
+        <h2>My projects</h2>
+        <h3>To-Do list</h3>
+        <p>
+          Simple To-Do list includes adding, removing, marking as completed and
+          editing
+        </p>
+        <a href="todo-list/index.html"
+          ><img src="todolist.png" alt="" style="max-width: 100%"
+        /></a>
+      </div>
+      <div class="div.calculator">
+        <h3>Calculator</h3>
+        <p>Simple calculator + , - , * , /</p>
+        <a href="calculator/index.html"
+          ><img src="calculator_2.png" alt="" style="max-width: 100%"
+        /></a>
+      </div>
+      <h3>Weather app</h3>
+      <p>Work in progress</p>
     </div>
   </body>
 </html>
