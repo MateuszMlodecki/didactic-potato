@@ -18,6 +18,7 @@ body {
   color: #000;
   font-size: 1.5rem;
   border: 1px solid #000;
+  border-radius: 5px;
   padding: 0.5rem 0.5rem;
   margin-left: 2rem;
   margin-bottom: 1rem;
@@ -186,10 +187,9 @@ body.dark-mode {
   color: white;
 }
 /* Folding */
+
 .folding-expanded .folding-content {
   max-height: 100vh;
-  box-shadow: 0 0 3px 2px #fff;
-  border-radius: 5px;
 }
 .folding-expanded #menu-icon {
   box-shadow: 0 0 3px 2px #fff;
